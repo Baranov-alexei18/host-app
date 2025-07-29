@@ -28,16 +28,16 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: 'host_app',
-      remotes: {
-        remote_app: 'remote_app@http://localhost:3001/remoteEntry.js',
-      },
+      // remotes: {
+      //   remote_app: 'remote_app@http://localhost:3001/remoteEntry.js',
+      // },
       exposes: {
         './Menu': './src/components/Menu',
       },
       shared: {
-        react: { singleton: true, requiredVersion: false },
-        'react-dom': { singleton: true, requiredVersion: false },
-        'react-router-dom': { singleton: true, requiredVersion: false },
+        react: { singleton: true, eager: false, requiredVersion: false },
+        'react-dom': { singleton: true,eager: false, requiredVersion: false },
+        'react-router-dom': { singleton: true, eager: false, requiredVersion: false },
       },
     }),
     new HtmlWebpackPlugin({
