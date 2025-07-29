@@ -34,11 +34,6 @@ module.exports = {
       exposes: {
         './Menu': './src/components/Menu',
       },
-      shared: {
-        react: { singleton: true, eager: false, requiredVersion: false },
-        'react-dom': { singleton: true,eager: false, requiredVersion: false },
-        'react-router-dom': { singleton: true, eager: false, requiredVersion: false },
-      },
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
