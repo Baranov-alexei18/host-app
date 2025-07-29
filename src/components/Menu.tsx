@@ -17,7 +17,7 @@ const Menu = () => (
         <Link to="/about">About</Link>
       </li>
       <li>
-        <Link to="/remote-page">Remote Page</Link>
+        <Link to="/remote">Remote Page</Link>
       </li>
     </ul>
   </nav>

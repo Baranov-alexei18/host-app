@@ -36,7 +36,7 @@ const App = () => {
   console.log('Remote React:', React.version);
 
   console.log(RemotePage);
-  
+
   return (
     <BrowserRouter>
       <h2>Webpack Module Federation</h2>
@@ -50,11 +50,12 @@ const App = () => {
             <Route
               path="/remote"
               element={
-                <ErrorBoundary>
-                  <Suspense fallback={<div>Загрузка RemotePage...</div>}>
-                    <RemotePage />
-                  </Suspense>
-                </ErrorBoundary>
+                      <ErrorBoundary>
+                        <Suspense fallback={<div>Загрузка RemotePage...</div>}>
+                          <RemotePage />
+                        </Suspense>
+                        1234
+                      </ErrorBoundary>
               }
             />
           </Routes>
