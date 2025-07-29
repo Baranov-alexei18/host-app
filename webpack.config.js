@@ -32,16 +32,15 @@ module.exports = {
       // remotes: {
       //   remote_app: 'remote_app@http://localhost:3001/remoteEntry.js',
       // },
-      exposes: {
-        './Menu': './src/components/Menu',
-      },
-      shared: {
+        shared: {
     react: {
       singleton: true,
-      requiredVersion: '^18.2.0',
+      eager: false,
+      requiredVersion: '^18.2.0', // версия из твоего package.json
     },
     'react-dom': {
       singleton: true,
+      eager: false,
       requiredVersion: '^18.2.0',
     },
   },
