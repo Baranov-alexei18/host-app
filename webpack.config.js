@@ -35,6 +35,11 @@ module.exports = {
       remotes: {
         remote_app: 'remote_app@https://remote-app-roan.vercel.app/remoteEntry.js',
       },
+      shared: {
+        react: { singleton: true },
+        "react-dom": { singleton: true },
+        "react-router-dom": { singleton: true }
+      }
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
