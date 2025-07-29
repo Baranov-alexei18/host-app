@@ -32,9 +32,9 @@ module.exports = {
       exposes: {
         './Menu': './src/components/Menu.tsx',
       },
-      // remotes: {
-      //   remote_app: 'remote_app@http://localhost:3001/remoteEntry.js',
-      // },
+      remotes: {
+        remote_app: 'remote_app@http://localhost:3001/remoteEntry.js',
+      },
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
