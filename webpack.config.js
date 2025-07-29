@@ -33,7 +33,7 @@ module.exports = {
         './Menu': './src/components/Menu.tsx',
       },
       remotes: {
-        remote_app: 'remote_app@http://localhost:3001/remoteEntry.js',
+        remote_app: 'remote_app@https://remote-app-roan.vercel.app/remoteEntry.js',
       },
     }),
     new HtmlWebpackPlugin({
