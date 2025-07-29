@@ -29,19 +29,22 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'host_app',
       filename: 'remoteEntry.js',
+      exposes: {
+        './Menu': './src/components/Menu.tsx',
+      },
       // remotes: {
       //   remote_app: 'remote_app@http://localhost:3001/remoteEntry.js',
       // },
-  //       shared: {
-  //   react: {
-  //     singleton: true,
-  //     requiredVersion: '^18.2.0', // версия из твоего package.json
-  //   },
-  //   'react-dom': {
-  //     singleton: true,
-  //     requiredVersion: '^18.2.0',
-  //   },
-  // },
+        shared: {
+    react: {
+      singleton: true,
+      requiredVersion: '^18.2.0', // версия из твоего package.json
+    },
+    'react-dom': {
+      singleton: true,
+      requiredVersion: '^18.2.0',
+    },
+  },
 
     }),
     new HtmlWebpackPlugin({
