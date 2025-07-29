@@ -2,13 +2,10 @@ import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import RemoteWrapper from './pages/RemoteWrapper';
 import Menu from './components/Menu';
 
-// Импорт компонента RemotePage из remote-приложения
 const RemotePage = React.lazy(() => import('remote_app/PageRemote'));
 
-// Простой ErrorBoundary компонент
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -45,17 +42,15 @@ const App = () => {
         <div style={{ flex: 1, padding: '20px' }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/remote-page" element={<RemoteWrapper />} />
+            <Route path="/about" element={<About />} />ъ
             <Route
               path="/remote"
               element={
-                      <ErrorBoundary>
-                        <Suspense fallback={<div>Загрузка RemotePage...</div>}>
-                          <RemotePage />
-                        </Suspense>
-                        1234
-                      </ErrorBoundary>
+                <ErrorBoundary>
+                  <Suspense fallback={<div>Загрузка RemotePage...</div>}>
+                    <RemotePage />
+                  </Suspense>
+                </ErrorBoundary>
               }
             />
           </Routes>
