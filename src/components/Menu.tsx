@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Menu = () => (
   <nav style={{
@@ -11,13 +10,13 @@ const Menu = () => (
   }}>
     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
       <li style={{ marginBottom: '10px' }}>
-        <Link to="/">Home</Link>
+        <a href="/">Home</a>
       </li>
       <li style={{ marginBottom: '10px' }}>
-        <Link to="/about">About</Link>
+        <a href="/about">About</a>
       </li>
       <li>
-        <Link to="/remote">Remote Page</Link>
+        <a href="/remote">Remote Page</a>
       </li>
     </ul>
   </nav>
